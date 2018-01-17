@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*删除默认样式*/
+* {
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol {
+  list-style: none; }
+
+input, button {
+  outline: none; }
+
+/*页面基本样式*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 12px; }
+
+/*按钮基本样式*/
+button {
+  border: none;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #003366;
+  color: #fff;
+  cursor: pointer; }
+
+button:hover {
+  background-color: #d18631; }
+
+/*禁止选中*/
+* {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/*禁选input兼容*/
+input {
+  moz-user-select: -moz-auto;
+  -moz-user-select: auto;
+  -o-user-select: auto;
+  -khtml-user-select: auto;
+  -webkit-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto; }
+
+/*滚动条样式*/
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+*::-webkit-scrollbar-button {
+  background-color: transparent; }
+
+*::-webkit-scrollbar-track {
+  background: #2a2d2f;
+  border-radius: 5px; }
+
+*::-webkit-scrollbar-thumb {
+  background: #3f4147;
+  border-radius: 5px; }
+
+*::-webkit-scrollbar-corner {
+  background: #82AFFF; }
+
+*::-webkit-scrollbar-resizer {
+  background: #dfdfdf; }
+
+.zczFull {
+  height: 100% !important; }
+
+select {
+  background-color: #36363a;
+  border-color: #000;
+  color: #fff; }
+
+iframe {
+  border: none; }
+
+.imgHover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 830px;
+  height: 700px;
+  background-color: #444851;
+  display: none; }
+  .imgHover div {
+    width: 730px;
+    height: 700px;
+    float: left;
+    position: relative;
+    background-color: #000; }
+    .imgHover div img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+  .imgHover ul {
+    width: 100px;
+    height: 700px;
+    float: left; }
+
+/*# sourceMappingURL=public.css.map */

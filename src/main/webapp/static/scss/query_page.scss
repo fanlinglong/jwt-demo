@@ -1,0 +1,378 @@
+@charset "utf-8";
+@import "publicMixin";
+.zczQueryLeft {
+    width: 346px;
+    height: 100%;
+    float: left;
+    border-right:2px solid #435371;
+    @include bgColor(left top, #2e3965 , #265482);
+    .zczQLList {
+        @extend .extendTitle;
+    }
+    .ztree {
+        @include calcM(61px,height);
+        display: none;
+        @include box-sizing;
+    }
+    .ztreeBlock {
+        display: block;
+        overflow-y: auto;
+    }
+}
+
+.zczQueryRight {
+    float: left;
+    @include calcM(348px,width);
+    height: 100%;
+    @include bgColor(left top, #2e426b ,#2c6187, #153e74);
+    padding:21px 16px 26px 29px;
+    @include box-sizing;
+    .zczQRTop {
+        height: 347px;
+        margin-bottom:16px;
+        &>div {
+            height: 347px;
+            float: left;
+            @include box-sizing;
+            border:2px solid #4e6b84;
+            background-color:#213f68;
+            position:relative;
+        }
+        & span,
+        & button,
+        & select {
+            display: inline-block;
+            float: left;
+            height: 20px;
+            line-height: 20px;
+        }
+        .zczQRTLeft {
+            width: 473px;
+            padding: 16px 15px 0px 16px;
+            margin-right:13px;
+            .zczQRTUp{
+            	width:438px;
+            	height:286px;
+            	@include box-sizing;
+            	background-color:#153a63;
+            	padding:10px 9px 0 10px;
+            	.zczQRTLImg {
+	                height: 204px;
+	                background-color:#000;
+	                margin-bottom:21px;
+	            	div{
+	            		overflow:hidden;
+	            		img{
+			        		display:block;
+			        		margin:auto;
+			        	}
+	            	}
+	            }
+	            .zczQRTM{
+	            	height:20px;
+	            	.zczQRTLThreshold {
+	            		float:left;
+		                height: 20px;
+		                .zczPercentageSlider {
+		                    margin:12px 10px 0 10px;
+		                    width: 125px;
+		                    height: 8px;
+		                    border-radius: 4px;
+		                    float: left;
+		                    background-color: #444444;
+		                    @include box-sizing;
+		                    @include boxSha(0 0 4px #000 inset);
+		                    cursor: pointer;
+		                    position: relative;
+		                    &>div {
+		                        float: left;
+		                        height: 8px;
+		                        cursor: pointer;
+		                    }
+		                    .zczPercentage {
+		                        border-radius: 4px;
+		                        width: 0px;
+		                        background-color: #a1a1a1;
+		                    }
+		                    .zczSlider {
+		                        width: 13px;
+		                        height:24px;
+		                        background:{
+		                        	image:url(../img/query_page/slid.png);
+									repeat:no-repeat;
+									size:100% 100%;
+		                        }
+		                        margin:-8px 0 0 -6px;
+		                        position: absolute;
+		                        .zczQRTLTPercentage{
+			                    	position:absolute;
+			                    	top:-15px;
+			                    	left:-2px;
+			                    }
+		                    }
+		                    &:before{
+		                    	content:"0%";
+		                    	position:absolute;
+		                    	left:-8px;
+		                    	top:-21px;
+		                    }
+		                    &:after{
+		                    	content:"100%";
+		                    	position:absolute;
+		                    	right:-15px;
+		                    	top:-21px;
+		                    }
+		                }
+		            }
+		            .zczQRTLMaxnb {
+		            	float:right;
+		                height: 20px;
+		                select {
+		                    width: 80px;
+		                    height:26px;
+		                    margin-top:-3px;
+		                }
+		            }
+	            }
+            }
+            .zczQRTLButton {
+            	margin-top:11px;
+                height: 20px;
+                button{
+                	width:73px;
+                	border-radius:4px;
+                	@include box-sizing;
+                	border:1px solid #1399f6;
+                	line-height:18px;
+                	background-color:#2c71b0;
+                	text-align:left;
+                	text-indent:18px;
+                	background-repeat:no-repeat;
+                	position:relative;
+                	font-size:12px!important;
+                }
+                button:hover{
+                	background-color:#2b69a2;
+                	border:1px solid #d3d3d3;
+                }
+                .zczQRTLAdd {
+                	background:{
+                    	image:url(../img/query_page/add.png);
+						position:4px 3px;
+                    }
+                    margin-right: 21px;
+                    >div{
+                    	width:100%;
+						left:0;
+						position:absolute;
+						top:0;
+						overflow:hidden;
+						line-height:18px;
+                    }
+                }
+                .zczQRTLDelete{
+                	background:{
+                    	image:url(../img/query_page/del.png);
+						position:4px 3px;
+                    }
+                }
+            }
+            &:before{
+            	content:"以图搜图";
+            	position:absolute;
+            	left:10px;
+            	top:-13px;
+            	font-size:16px;
+            	background-color:#213f68;
+            }
+        }
+        .zczQRTRight {
+            @include box-sizing;
+            padding: 10px 0 0 20px;
+            @include calcM(486px,width);
+            span{
+            	display:inline-block;
+            	width:80px;
+            	height:26px;
+            	line-height:26px;
+            }
+            input{
+            	@include box-sizing;
+            	border-width:1px;
+            	height:26px;
+            	line-height:26px;
+            }
+            select{
+            	height:26px;
+            }
+            .zczQRTRTitle {
+                height: 26px;
+                margin-bottom: 10px;
+                select {
+                    width: 395px;
+                }
+            }
+            .zczQRTRContent {
+                overflow: hidden;
+                width: 100%;
+                li {
+                    float: left;
+                    margin: 0 20px 10px 0;
+                    height: 26px;
+                    select {
+                        width: 150px;
+                    }
+                }
+            }
+            .zczQRTRLine{
+            	width:730px;
+            	height:2px;
+            	background-color:#1d436a;
+            	margin-bottom:9px;
+            }
+            &:before{
+            	content:"语意检索";
+            	position:absolute;
+            	left:10px;
+            	top:-13px;
+            	font-size:16px;
+            	background-color:#213f68;
+            }
+        }
+        .zczQRTBottom {
+            height: 26px;
+            position: relative;
+            width: 730px;
+            button {
+                position: absolute;
+                height:26px;
+                right: 0;
+                top: 0;
+                width:100px;
+                border-radius:3px;
+                text-align:left;
+                text-indent:38px;
+                background:{
+                	image:url(../img/query_page/scBt.png);
+					position:14px 7px;
+					repeat:no-repeat;
+					color:#2676c0;
+                }
+                &:hover{
+                	background-color:#499be6;
+                }
+            }
+        }
+    }
+    .zczQRBottom {
+        @include calcM(363px,height);
+        @include box-sizing;
+        padding: 17px 0px 0 6px;
+        border:2px solid #4e6b84;
+        background-color:#213f68;
+        position:relative;
+        .zczQRBContent {
+            @include calcM(60px,height);
+            overflow-x: hidden;
+            overflow-y: auto;
+            .zczQRBCList {
+                overflow: hidden;
+                >li {
+                    width: 238px;
+                    height: 117px;
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    background-color: #444851;
+                    &:nth-child(6n){
+                    	margin-right: 0;
+                    }
+                    dl {
+                        height: 100%;
+                        width:100%;
+                        @include box-sizing;
+                        padding: 7px 0 10px 18px;
+                        &>*{
+                        	float:left;
+                        	height: 100px;
+                        }
+                        dt {
+                            width:80px;
+                            position:relative;
+							background-color:#000;
+							margin-right:18px;
+                            img {
+                                position:absolute;
+								left:0;
+								top:0;
+								right:0;
+								bottom:0;
+								margin:auto;
+                            }
+                        }
+                        dd {
+                        	@include calcM(98px,width);
+                            ul {
+								li:nth-child(n+7){
+									display:none;
+								}
+		                    }
+                        }
+                    }
+                }
+            }
+        }
+        .zczQRBFoot {
+            height: 20px;
+            padding-top: 20px;
+            &>div{
+            	float:left;
+            	height: 20px;
+            }
+            .zczQRBFNum {
+            	margin:0 29px 0 360px;
+            }
+            .zczQRBFFlip {
+            	&>div{
+            		float: left;
+            		display: inline-block;
+            		padding: 0 5px;
+            		height:20px;
+            		input {
+                        background-color: #cce7fa;
+                        border: none;
+                        height: 18px;
+                        border:1px solid #2983c2;
+                        width: 18px;
+                        color: #393939;
+                        margin: 0 5px;
+                    }
+            	}
+                &>div:not(:nth-child(5)) {
+                    cursor: pointer;
+                    background-color: #23517e;
+                    border:1px solid #2983c2;
+                    height: 18px;
+                    line-height: 18px;
+                    margin-right: 5px;
+                    &:not(:nth-child(5)):hover {
+                        background-color: #55a4ea;
+                    }
+                }
+            }
+        }
+        &:before{
+        	content:"检索结果";
+        	position:absolute;
+        	left:10px;
+        	top:-13px;
+        	font-size:16px;
+        	background-color:#213f68;
+        }
+    }
+}
+.layui-layer-content{
+	color:#000;
+	text-align:center;
+}

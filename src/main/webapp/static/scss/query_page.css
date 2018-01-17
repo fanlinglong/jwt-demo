@@ -1,0 +1,334 @@
+.zczQueryLeft {
+  width: 300px;
+  height: 100%;
+  float: left;
+  background-color: rgba(0, 0, 51, 0.9); }
+  .zczQueryLeft .zczQLList {
+    height: 50px; }
+    .zczQueryLeft .zczQLList li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+      background-color: #515151; }
+      .zczQueryLeft .zczQLList li:hover, .zczQueryLeft .zczQLList li.zczQLLCheck {
+        background-color: #373a3c; }
+  .zczQueryLeft .ztree {
+    height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+    height: -ms-calc(100% - 50px);
+    height: -o-calc(100% - 50px);
+    display: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box; }
+  .zczQueryLeft .ztreeBlock {
+    display: block; }
+
+.zczQueryRight {
+  float: left;
+  width: calc(100% - 300px);
+  width: -webkit-calc(100% - 300px);
+  width: -moz-calc(100% - 300px);
+  width: -ms-calc(100% - 300px);
+  width: -o-calc(100% - 300px);
+  height: 100%;
+  background-color: #000033; }
+  .zczQueryRight .zczQRTop {
+    height: 200px; }
+    .zczQueryRight .zczQRTop > div {
+      height: 170px;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box; }
+    .zczQueryRight .zczQRTop span, .zczQueryRight .zczQRTop button, .zczQueryRight .zczQRTop select {
+      display: inline-block;
+      float: left;
+      height: 20px;
+      line-height: 20px; }
+    .zczQueryRight .zczQRTop .zczQRTLeft {
+      width: 300px;
+      padding: 10px 10px 10px 20px; }
+      .zczQueryRight .zczQRTop .zczQRTLeft > div:not(:last-child) {
+        margin-bottom: 5px; }
+      .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLButton {
+        height: 20px; }
+        .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLButton span {
+          margin-right: 90px; }
+        .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLButton .zczQRTLAdd {
+          margin-right: 15px; }
+          .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLButton .zczQRTLAdd > div {
+            width: 100%;
+            left: 0; }
+      .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLImg {
+        height: 75px;
+        background-color: #000; }
+        .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLImg div {
+          overflow: hidden; }
+          .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLImg div img {
+            display: block;
+            margin: auto; }
+      .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLThreshold {
+        height: 20px; }
+        .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLThreshold .zczPercentageSlider {
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 155px;
+          height: 20px;
+          border-radius: 10px;
+          float: left;
+          background-color: #36363a;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-shadow: 0 0 10px #000 inset;
+          -webkit-box-shadow: 0 0 10px #000 inset;
+          -moz-box-shadow: 0 0 10px #000 inset;
+          -ms-box-shadow: 0 0 10px #000 inset;
+          -o-box-shadow: 0 0 10px #000 inset;
+          cursor: pointer;
+          position: relative; }
+          .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLThreshold .zczPercentageSlider > div {
+            float: left;
+            height: 20px;
+            cursor: pointer; }
+          .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLThreshold .zczPercentageSlider .zczPercentage {
+            border-radius: 10px;
+            width: 0px;
+            background-color: #168ef3; }
+          .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLThreshold .zczPercentageSlider .zczSlider {
+            width: 20px;
+            border-radius: 50%;
+            background-color: #44474b;
+            box-shadow: 0 0 10px #000;
+            -webkit-box-shadow: 0 0 10px #000;
+            -moz-box-shadow: 0 0 10px #000;
+            -ms-box-shadow: 0 0 10px #000;
+            -o-box-shadow: 0 0 10px #000;
+            margin-left: -10px;
+            position: absolute; }
+      .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLMaxnb {
+        height: 20px; }
+        .zczQueryRight .zczQRTop .zczQRTLeft .zczQRTLMaxnb select {
+          width: 80px; }
+    .zczQueryRight .zczQRTop .zczQRTLine {
+      width: 1px;
+      padding-top: 20px; }
+      .zczQueryRight .zczQRTop .zczQRTLine div {
+        height: 130px;
+        background-color: #000; }
+    .zczQueryRight .zczQRTop .zczQRTRight {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      padding: 10px 0 0 20px;
+      width: calc(100% - 301px);
+      width: -webkit-calc(100% - 301px);
+      width: -moz-calc(100% - 301px);
+      width: -ms-calc(100% - 301px);
+      width: -o-calc(100% - 301px); }
+      .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTitle {
+        height: 20px;
+        margin-bottom: 5px; }
+        .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTitle > span:first-child {
+          margin-right: 20px; }
+        .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTitle select {
+          width: 200px; }
+      .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRContent {
+        overflow: hidden;
+        width: 100%; }
+        .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRContent li {
+          float: left;
+          width: 250px;
+          margin: 0 5px 5px 0;
+          height: 20px; }
+          .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRContent li span {
+            width: 90px; }
+          .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRContent li select {
+            width: 160px; }
+      .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTime {
+        margin-top: 10px;
+        height: 20px; }
+        .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTime input {
+          float: left;
+          height: 20px;
+          border: none;
+          background-color: #36363a;
+          box-shadow: 0 0 10px #000 inset;
+          -webkit-box-shadow: 0 0 10px #000 inset;
+          -moz-box-shadow: 0 0 10px #000 inset;
+          -ms-box-shadow: 0 0 10px #000 inset;
+          -o-box-shadow: 0 0 10px #000 inset;
+          margin-right: 10px;
+          border-radius: 3px; }
+        .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTime div {
+          float: left;
+          width: 50px;
+          text-align: center;
+          height: 18px;
+          border: 1px solid #000;
+          margin-right: 10px;
+          cursor: pointer;
+          border-radius: 3px;
+          background-color: #2d2e32; }
+          .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTime div:hover, .zczQueryRight .zczQRTop .zczQRTRight .zczQRTRTime div.zczTimeSearch {
+            background-color: #1690f5; }
+    .zczQueryRight .zczQRTop .zczQRTBottom {
+      height: 20px;
+      margin-top: 10px;
+      border-bottom: 1px solid #000;
+      position: relative;
+      width: 100%; }
+      .zczQueryRight .zczQRTop .zczQRTBottom .zczPull {
+        display: inline-block;
+        width: 14px;
+        height: 4px;
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        margin-left: -7px;
+        cursor: pointer;
+        background-image: url(../img/query_page/top.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transform-origin: 50% 100%; }
+      .zczQueryRight .zczQRTop .zczQRTBottom button {
+        position: absolute;
+        right: 50px;
+        top: -1px; }
+  .zczQueryRight .zczQRBottom {
+    height: calc(100% - 200px);
+    height: -webkit-calc(100% - 200px);
+    height: -moz-calc(100% - 200px);
+    height: -ms-calc(100% - 200px);
+    height: -o-calc(100% - 200px);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 10px 5px 0 5px; }
+    .zczQueryRight .zczQRBottom .zczQRBHead {
+      height: 20px;
+      margin-bottom: 10px; }
+      .zczQueryRight .zczQRBottom .zczQRBHead h6 {
+        height: 20px;
+        line-height: 20px;
+        float: left; }
+      .zczQueryRight .zczQRBottom .zczQRBHead span {
+        display: inline-block;
+        float: right;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/query_page/download.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        cursor: pointer; }
+    .zczQueryRight .zczQRBottom .zczQRBContent {
+      height: calc(100% - 60px);
+      height: -webkit-calc(100% - 60px);
+      height: -moz-calc(100% - 60px);
+      height: -ms-calc(100% - 60px);
+      height: -o-calc(100% - 60px);
+      overflow-x: hidden;
+      overflow-y: auto; }
+      .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList {
+        overflow: hidden; }
+        .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li {
+          width: 195px;
+          height: 100px;
+          float: left;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          position: relative;
+          background-color: #444851; }
+          .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li dl {
+            float: left;
+            width: 30px;
+            height: 100%;
+            margin: 0 20px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            padding: 5px 0; }
+            .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li dl > * {
+              width: 100%; }
+            .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li dl dt {
+              height: 70px;
+              position: relative;
+              background-color: #000; }
+              .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li dl dt img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto; }
+            .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li dl dd {
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+              color: red; }
+          .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li ul {
+            width: 100px;
+            height: 100px;
+            float: left; }
+            .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li ul li:nth-child(n+6) {
+              display: none; }
+          .zczQueryRight .zczQRBottom .zczQRBContent .zczQRBCList > li span {
+            display: inline-block;
+            position: absolute;
+            left: 5px;
+            bottom: 10px;
+            width: 12px;
+            height: 10px;
+            background-image: url(../img/test.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat; }
+    .zczQueryRight .zczQRBottom .zczQRBFoot {
+      height: 25px;
+      padding-top: 5px; }
+      .zczQueryRight .zczQRBottom .zczQRBFoot .zczQRBFNum {
+        float: left;
+        height: 20px; }
+      .zczQueryRight .zczQRBottom .zczQRBFoot .zczQRBFFlip {
+        float: right;
+        height: 20px; }
+        .zczQueryRight .zczQRBottom .zczQRBFoot .zczQRBFFlip > div {
+          float: left;
+          display: inline-block;
+          padding: 0 5px;
+          cursor: pointer;
+          background-color: #36363a;
+          height: 20px;
+          line-height: 20px;
+          margin-right: 5px; }
+          .zczQueryRight .zczQRBottom .zczQRBFoot .zczQRBFFlip > div:not(:nth-child(5)):hover {
+            background-color: #1691f4; }
+          .zczQueryRight .zczQRBottom .zczQRBFoot .zczQRBFFlip > div input {
+            background-color: #003366;
+            border: none;
+            height: 20px;
+            width: 40px;
+            color: #fff;
+            margin: 0 5px; }
+
+.layui-layer-content {
+  color: #000;
+  text-align: center; }
+
+/*# sourceMappingURL=query_page.css.map */

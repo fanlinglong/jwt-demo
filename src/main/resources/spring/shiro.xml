@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置SecurityManager-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realms">
+            <list>
+                <ref bean="shiroRealm"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--配置Realm-->
+    <!--直接配置实现了org.apache.shiro.realm.Realm接口的bean-->
+    <bean id="shiroRealm" class="com.videtek.jwt.demo.shiro.realms.ShiroRealm">
+        <!-- 凭证匹配器：配置登录验证所使用的加密算法-->
+        <property name="credentialsMatcher">
+            <!-- 数据库保存的密码是使用MD5算法加密的，所以这里需要配置一个密码匹配对象 -->
+            <bean class="com.videtek.jwt.demo.shiro.credentialsMatcher.RetryLimitHashedCredentialsMatcher">
+                <constructor-arg index="0" name="cacheManager" ref="cacheManager"/>
+                <constructor-arg index="1" name="redisManager" ref="redisManager"/>
+                <property name="hashAlgorithmName" value="md5"></property><!--加密算法为md5-->
+                <property name="hashIterations" value="3"></property><!--3次md5迭代-->
+                <!--是否存储散列后的密码为16进制，需要和生成密码时的一样，默认是base64-->
+                <property name="storedCredentialsHexEncoded" value="true"></property>
+            </bean>
+        </property>
+    </bean>
+
+
+    <!-- shiro拦截器-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="successUrl" value="/main"/>
+        <property name="loginUrl" value="/tologin"/>
+        <!--配置哪些页面需要受保护
+            1. anon 可以被匿名访问
+            2. authc 必须认证(登录)后才可能访问的页面
+            3. logout 登出
+        -->
+
+        <!--自定义filters,该拦截器即为实现单点登录的拦截器-->
+        <property name="filters">
+            <map>
+                <entry key="acf">
+                    <bean class="com.videtek.jwt.demo.shiro.filter.AccessingControlFilter"/>
+                </entry>
+            </map>
+        </property>
+        <property name="filterChainDefinitions">
+            <value>
+                /login=anon
+                /** = acf
+            </value>
+        </property>
+    </bean>
+
+
+
+    <!-- Shiro生命周期处理器 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+
+    <bean id="cacheManager" class="com.videtek.jwt.demo.shiro.cache.CustomShiroCacheManager">
+        <property name="shiroCacheManager" ref="redisShiroCacheManager" />
+    </bean>
+
+    <!--redis cache管理器 -->
+    <bean id="redisShiroCacheManager" class="com.videtek.jwt.demo.shiro.cache.RedisShiroCacheManager">
+        <property name="cacheManager" ref="redisManager" />
+    </bean>
+
+
+
+</beans>

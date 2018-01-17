@@ -1,0 +1,130 @@
+.extendTitle {
+  height: 61px;
+}
+.extendTitle li {
+  border: 1px solid #596070;
+  float: left;
+  height: 59px;
+  line-height: 59px;
+  width: 170px;
+  text-align: left;
+  text-indent: 71px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 28px 18px;
+}
+.extendTitle li:hover, .extendTitle li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle li:first-child {
+  margin-right: 2px;
+}
+
+.extendTitle_smoll {
+  height: 49.3656480506px;
+}
+.extendTitle_smoll li {
+  border: 1px solid #596070;
+  float: left;
+  height: 47.7471022129px;
+  line-height: 47.7471022129px;
+  width: 120.4166666667px;
+  text-align: left;
+  text-indent: 50.2916666667px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 19.8333333333px 14.5669125395px;
+}
+.extendTitle_smoll li:hover, .extendTitle_smoll li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle_smoll li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle_smoll li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle_smoll li:first-child {
+  margin-right: 1.4166666667px;
+}
+
+.zczMainLeft {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left top, #1e4273, #214979);
+  background: -o-linear-gradient(left top, #1e4273, #214979);
+  background: -moz-linear-gradient(left top, #1e4273, #214979);
+  background: linear-gradient(left top, #1e4273, #214979);
+  border: 2px solid #51637a;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  padding-top: 16.1854583772px;
+}
+.zczMainLeft li {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  height: 113.2982086407px;
+  line-height: 113.2982086407px;
+  text-indent: 77.9166666667px;
+  width: 198.3333333333px;
+  float: left;
+  cursor: pointer;
+  font-size: 12.9483667018px;
+  position: relative;
+  border: 1px solid #fff;
+  background-repeat: no-repeat;
+  background-position: 31.1666666667px 49.3656480506px;
+}
+.zczMainLeft li:not(:first-child) {
+  margin-left: 7.0833333333px;
+}
+.zczMainLeft li:not(:first-child):hover {
+  background-color: #3a5f85;
+}
+.zczMainLeft li:not(:first-child):hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.8333333333px;
+  height: 37.2265542677px;
+  background-color: #2983c2;
+  border-radius: 1px;
+}
+.zczMainLeft li:nth-child(2) {
+  background-image: url(../img/main/search.png);
+}
+.zczMainLeft li:nth-child(3) {
+  background-image: url(../img/main/snapshot.png);
+}
+.zczMainLeft li:nth-child(4) {
+  background-image: url(../img/main/task.png);
+}
+.zczMainLeft .zczMun {
+  width: 42.5px;
+  height: 113.2982086407px;
+  writing-mode: tb-rl;
+  font-size: 14.5669125395px;
+  border: 1px solid #606775;
+  text-indent: 35.4166666667px;
+  line-height: 46.937829294px;
+  background-image: url(../img/main/menu.png);
+  background-position: 11px 12.1390937829px;
+}
+
+/*# sourceMappingURL=smoll_menu.css.map */

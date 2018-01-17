@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/*删除默认样式*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input,button{
+    outline: none;
+}
+
+/*页面基本样式*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+/*按钮基本样式*/
+
+button {
+    border: none;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: rgb(0, 51, 102);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(209, 134, 49);
+}
+
+
+/*禁止选中*/
+
+* {
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*禁选input兼容*/
+input{
+  moz-user-select: -moz-auto;
+  -moz-user-select: auto;
+  -o-user-select: auto;
+  -khtml-user-select: auto;
+  -webkit-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+/*滚动条样式*/
+
+*::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+*::-webkit-scrollbar-button {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track {
+    background: #386087;
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #4e7e9f;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-corner {
+    background: #82AFFF;
+}
+
+*::-webkit-scrollbar-resizer {
+    background: #dfdfdf;
+}
+
+//改变高度样式
+.zczFull {
+    height: 100%!important;
+}
+
+//下拉条基本样式
+select {
+    background-color: #0e2d51;
+    border-color: #0c2645;
+    color: #fff;
+}
+
+//iframe基本样式
+iframe{
+    border: none;
+}
+
+//hover基本样式
+.imgHover{
+	position:absolute;
+	left:0;
+	top:0;
+	width:830px;
+	height:700px;
+	background-color:#444851;
+	display:none;
+	div{
+		width:730px;
+		height:700px;
+		float:left;
+		position:relative;
+		background-color:#000;
+		img{
+			position:absolute;
+			left:0;
+			top:0;
+			right:0;
+			bottom:0;
+			margin:auto;
+		}
+		span{
+			position:absolute;
+			display:block;
+			border:1px solid red;
+		}
+	}
+	ul{
+		width:100px;
+		height:700px;
+		float:left;
+		li{
+			
+		}
+	}
+}

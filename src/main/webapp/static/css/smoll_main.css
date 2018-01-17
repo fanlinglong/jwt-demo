@@ -1,0 +1,130 @@
+.extendTitle {
+  height: 61px;
+}
+.extendTitle li {
+  border: 1px solid #596070;
+  float: left;
+  height: 59px;
+  line-height: 59px;
+  width: 170px;
+  text-align: left;
+  text-indent: 71px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 28px 18px;
+}
+.extendTitle li:hover, .extendTitle li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle li:first-child {
+  margin-right: 2px;
+}
+
+.extendTitle_smoll {
+  height: 49.3656480506px;
+}
+.extendTitle_smoll li {
+  border: 1px solid #596070;
+  float: left;
+  height: 47.7471022129px;
+  line-height: 47.7471022129px;
+  width: 120.4166666667px;
+  text-align: left;
+  text-indent: 50.2916666667px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 19.8333333333px 14.5669125395px;
+}
+.extendTitle_smoll li:hover, .extendTitle_smoll li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle_smoll li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle_smoll li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle_smoll li:first-child {
+  margin-right: 1.4166666667px;
+}
+
+html, body {
+  min-width: 1360px;
+  min-height: 768px;
+}
+
+.zczHeader {
+  background: -webkit-linear-gradient(left, #2b3b66, #1f4f7e);
+  background: -o-linear-gradient(left, #2b3b66, #1f4f7e);
+  background: -moz-linear-gradient(left, #2b3b66, #1f4f7e);
+  background: linear-gradient(left, #2b3b66, #1f4f7e);
+  height: 72.8345626976px;
+  border: 2px solid #575467;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+.zczHeader h1 {
+  float: left;
+  font-size: 29.133825079px;
+  height: 29.133825079px;
+  line-height: 29.133825079px;
+  margin: 20.2318229715px 0 0 19.125px;
+  cursor: pointer;
+}
+.zczHeader .zczUserName {
+  float: right;
+  height: 24.2781875659px;
+  margin: 22.6596417281px 15.5833333333px 0 0;
+}
+.zczHeader .zczUserName li {
+  float: left;
+  margin-right: 11.3333333333px;
+}
+.zczHeader .zczUserName .zczUIcon {
+  width: 15.5833333333px;
+  height: 20.2318229715px;
+  margin-top: 1.6185458377px;
+  cursor: pointer;
+  background-image: url(../img/main/person.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.zczHeader .zczUserName .zczUName {
+  height: 24.2781875659px;
+}
+.zczHeader .zczUserName .zczUName div {
+  height: 12px;
+  line-height: 12px;
+}
+.zczHeader .zczUserName .zczUExit {
+  width: 13.4583333333px;
+  height: 15.3761854584px;
+  margin-top: 8.9020021075px;
+  cursor: pointer;
+  background-image: url(../img/main/exit.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.zczMainRight {
+  float: left;
+  width: 100%;
+  height: calc(100% - 72.8345626976px);
+  height: -webkit-calc(100% - 72.8345626976px);
+  height: -moz-calc(100% - 72.8345626976px);
+  height: -ms-calc(100% - 72.8345626976px);
+  height: -o-calc(100% - 72.8345626976px);
+}
+
+/*# sourceMappingURL=smoll_main.css.map */

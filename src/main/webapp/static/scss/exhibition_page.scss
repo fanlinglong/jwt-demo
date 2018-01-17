@@ -1,0 +1,184 @@
+@charset "utf-8";
+@import "publicMixin";
+.zczExLeft{
+	width: 346px;
+	height:100%;
+	float:left;
+	border-right:2px solid #435371;
+	@include bgColor(left top, #2e3965 , #265482);
+	.zczExZtreeTitle{
+		@extend .extendTitle;
+	}
+	.ztree {
+        @include calcM(61px,height);
+        display: none;
+        @include box-sizing;
+    }
+    .ztreeBlock {
+        display: block;
+		overflow-y: auto;
+    }
+}
+.zczExRight{
+	@include calcM(348px,width);
+	height:100%;
+	float:left;
+	@include bgColor(left top, #2e426b ,#2c6187, #153e74);
+	padding:21px 16px 24px 29px;
+    @include box-sizing;
+	.zczExTop {
+	    height: 301px;
+	    margin-bottom:24px;
+	    &>div {
+	        height: 301px;
+            float: left;
+            @include box-sizing;
+            border:2px solid #4e6b84;
+            background-color:#213f68;
+            position:relative;
+	    }
+	    .zczEB{
+	    	width:473px;
+	    	padding:19px 15px 19px 16px;
+	    	margin-right:13px;
+	    	.zczExVideoBox {
+		        @include box-sizing;
+		        position:relative;
+		        background-color:#000;
+		        width:100%;
+		        height:100%;
+		        img {
+		            position:absolute;
+					left:0;
+					top:0;
+					right:0;
+					bottom:0;
+					margin:auto;
+		        }
+		    }
+		    &:before{
+            	content:"实时场景";
+            	position:absolute;
+            	left:10px;
+            	top:-13px;
+            	font-size:16px;
+            	background-color:#213f68;
+            }
+	    }
+	    .zczEvCarBox {
+	        @include box-sizing;
+	        padding: 19px 10px 23px 12px;
+	        @include calcM(486px,width);
+	        .zczEvPicDetails {
+	            height: 100%;
+	            dt {
+	                width: 233px;
+	                height: 100%;
+	                float: left;
+	                margin-right: 23px;
+	                position:relative;
+            		background-color:#000;
+            		@include box-sizing;
+            		border:2px solid #6f7b84;
+	                img {
+	                    position:absolute;
+						left:0;
+						top:0;
+						right:0;
+						bottom:0;
+						margin:auto;
+	                }
+	            }
+	            dd {
+	                float: left;
+	                @include calcM(256px,width);
+	                height:100%;
+	                overflow-y:auto;
+	                .zczEvPicContent {
+	                    overflow: hidden;
+	                    li {
+	                        width: 50%;
+	                        height: 30px;
+	                        float: left;
+	                        &>div {
+	                            float: left;
+	                            @include box-sizing;
+	                            border-right: 1px solid #6f7b84;
+	                            border-bottom: 1px solid #6f7b84;
+	                            text-align: center;
+	                            height: 30px;
+	                            line-height: 30px;
+	                            width: 50%;
+	                        }
+	                        &:nth-child(2n-1)>div:first-child{
+	                        	border-left: 1px solid #6f7b84;
+	                        }
+	                        &:nth-child(1)>div,&:nth-child(2)>div{
+	                        	border-top: 1px solid #6f7b84;
+	                        }
+	                        &>div:last-child {
+	                            color: #45af3d;
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	        &:before{
+            	content:"监拍信息";
+            	position:absolute;
+            	left:10px;
+            	top:-13px;
+            	font-size:16px;
+            	background-color:#213f68;
+            }
+	    }
+	}
+	
+	.zczExBottom {
+	    @include calcM(325px,height);
+	    @include box-sizing;
+	    padding: 19px 0 0 16px;
+	    border:2px solid #4e6b84;
+        background-color:#213f68;
+        position:relative;
+        h2{
+        	height:32px;
+        	line-height:32px;
+        	font-size:14px;
+        }
+	    .zczExSmollImgList,.zczExBigImgList {
+	        overflow: hidden;
+	        padding-bottom: 5px;
+	        margin-bottom:10px;
+	        li {
+	            width: 126px;
+	            height: 107px;
+	            float: left;
+	            margin-right: 10px;
+	            position:relative;
+	            background-color:#000;
+	            @include box-sizing;
+	            border:1px solid #6d6d6e;
+	            img {
+	                position:absolute;
+					left:0;
+					top:0;
+					right:0;
+					bottom:0;
+					margin:auto;
+	            }
+	        }
+	    }
+	    &:before{
+        	content:"实时监拍";
+        	position:absolute;
+        	left:10px;
+        	top:-13px;
+        	font-size:16px;
+        	background-color:#213f68;
+        }
+	}
+}
+.borderBottom {
+  border-bottom: 1px solid #464646;
+}

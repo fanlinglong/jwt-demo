@@ -1,0 +1,27 @@
+html, body {
+  min-width: 1920px;
+  min-height: 949px; }
+
+.zczMainLeft {
+  width: 200px;
+  height: 100%;
+  float: left;
+  background-color: #000033; }
+  .zczMainLeft li {
+    height: 50px;
+    line-height: 50px;
+    text-indent: 50px;
+    cursor: pointer; }
+    .zczMainLeft li:hover, .zczMainLeft li.dataCheck {
+      background-color: #ccc; }
+
+.zczMainRight {
+  float: left;
+  width: calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
+  width: -moz-calc(100% - 200px);
+  width: -ms-calc(100% - 200px);
+  width: -o-calc(100% - 200px);
+  height: 100%; }
+
+/*# sourceMappingURL=main.css.map */

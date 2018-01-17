@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@import "publicMixin";
+
+html,body{
+    min-width: 1920px;
+    min-height: 949px;
+}
+
+.zczHeader{
+	@include bgColor(left, #2b3b66 , #1f4f7e);
+	height:86px;
+	border:2px solid #575467;
+	h1{
+		float:left;
+		font-size:36px;
+		height:36px;
+		line-height:36px;
+		margin:25px 0 0 27px;
+		cursor:pointer;
+	}
+	.zczUserName{
+		float:right;
+		height:30px;
+		margin:28px 22px 0 0;
+		li{
+			float:left;
+			margin-right:16px;
+		}
+		.zczUIcon{
+			width:22px;
+			height:25px;
+			margin-top:2px;
+			cursor:pointer;
+			background:{
+				image:url(../img/main/person.png);
+				repeat:no-repeat;
+				size:100% 100%;
+			}
+		}
+		.zczUName{
+			height:30px;
+			div{
+				height:12px;
+				line-height:12px;
+			}
+		}
+		.zczUExit{
+			width:19px;
+			height:19px;
+			margin-top:11px;
+			cursor:pointer;
+			background:{
+				image:url(../img/main/exit.png);
+				repeat:no-repeat;
+				size:100% 100%;
+			}
+		}
+	}
+}
+
+.zczMainRight{
+    float: left;
+    width:100%;
+    @include calcM(90px,height);
+}
+

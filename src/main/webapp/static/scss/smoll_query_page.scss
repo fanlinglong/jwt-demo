@@ -1,0 +1,379 @@
+@charset "utf-8";
+@import "publicMixin";
+.zczQueryLeft {
+    width: 340px*$xPro+8px;
+    height: 100%;
+    float: left;
+    @include box-sizing;
+    border-right:2px solid #435371;
+    @include bgColor(left top, #2e3965 , #265482);
+    .zczQLList {
+        @extend .extendTitle_smoll;
+    }
+    .ztree {
+        @include calcM(61px*$yPro,height);
+        display: none;
+        @include box-sizing;
+    }
+    .ztreeBlock {
+        display: block;
+        overflow-y: auto;
+    }
+}
+
+.zczQueryRight {
+    float: left;
+    @include calcM(340px*$xPro+8px,width);
+    height: 100%;
+    @include bgColor(left top, #2e426b ,#2c6187, #153e74);
+    padding:21px*$yPro 16px*$xPro 26px*$yPro 29px*$xPro;
+    @include box-sizing;
+    .zczQRTop {
+        height: 347px*$yPro;
+        margin-bottom:16px*$yPro;
+        &>div {
+            height: 347px*$yPro;
+            float: left;
+            @include box-sizing;
+            border:2px solid #4e6b84;
+            background-color:#213f68;
+            position:relative;
+        }
+        & span,
+        & button,
+        & select {
+            display: inline-block;
+            float: left;
+            height: 20px*$yPro;
+            line-height: 20px*$yPro;
+        }
+        .zczQRTLeft {
+            width: 473px*$xPro;
+            padding: 16px*$yPro 15px*$xPro 0px 16px*$xPro;
+            margin-right:13px*$xPro;
+            .zczQRTUp{
+            	width:438px*$xPro;
+            	height:286px*$yPro;
+            	@include box-sizing;
+            	background-color:#153a63;
+            	padding:10px*$yPro 9px*$xPro 0 10px*$yPro;
+            	.zczQRTLImg {
+	                height: 204px*$yPro;
+	                background-color:#000;
+	                margin-bottom:21px*$yPro;
+	            	div{
+	            		overflow:hidden;
+	            		img{
+			        		display:block;
+			        		margin:auto;
+			        	}
+	            	}
+	            }
+	            .zczQRTM{
+	            	height:20px*$yPro;
+	            	.zczQRTLThreshold {
+	            		float:left;
+		                height: 20px*$yPro;
+		                .zczPercentageSlider {
+		                    margin:12px*$yPro 10px*$xPro 0 10px*$xPro;
+		                    width: 125px*$xPro;
+		                    height: 8px*$yPro;
+		                    border-radius: 4px*$yPro;
+		                    float: left;
+		                    background-color: #444444;
+		                    @include box-sizing;
+		                    @include boxSha(0 0 4px*$yPro #000 inset);
+		                    cursor: pointer;
+		                    position: relative;
+		                    &>div {
+		                        float: left;
+		                        height: 8px*$yPro;
+		                        cursor: pointer;
+		                    }
+		                    .zczPercentage {
+		                        border-radius: 4px*$yPro;
+		                        width: 0px;
+		                        background-color: #a1a1a1;
+		                    }
+		                    .zczSlider {
+		                        width: 13px*$xPro;
+		                        height:24px*$yPro;
+		                        background:{
+		                        	image:url(../img/query_page/slid.png);
+									repeat:no-repeat;
+									size:100% 100%;
+		                        }
+		                        margin:-8px*$yPro 0 0 -6px*$xPro;
+		                        position: absolute;
+		                        .zczQRTLTPercentage{
+			                    	position:absolute;
+			                    	top:-15px*$yPro;
+			                    	left:-2px*$xPro;
+			                    }
+		                    }
+		                    &:before{
+		                    	content:"0%";
+		                    	position:absolute;
+		                    	left:-8px*$xPro;
+		                    	top:-21px*$yPro;
+		                    }
+		                    &:after{
+		                    	content:"100%";
+		                    	position:absolute;
+		                    	right:-15px*$xPro;
+		                    	top:-21px*$yPro;
+		                    }
+		                }
+		            }
+		            .zczQRTLMaxnb {
+		            	float:right;
+		                height: 20px*$yPro;
+		                select {
+		                    width: 80px*$xPro;
+		                    height:26px*$yPro;
+		                    margin-top:-3px*$yPro;
+		                }
+		            }
+	            }
+            }
+            .zczQRTLButton {
+            	margin-top:11px*$yPro;
+                height: 20px*$yPro;
+                button{
+                	width:73px;
+                	border-radius:4px;
+                	@include box-sizing;
+                	border:1px solid #1399f6;
+                	line-height:18px*$yPro;
+                	background-color:#2c71b0;
+                	text-align:left;
+                	text-indent:18px*$xPro;
+                	background-repeat:no-repeat;
+                	position:relative;
+                	font-size:12px*$yPro!important;
+                }
+                button:hover{
+                	background-color:#2b69a2;
+                	border:1px solid #d3d3d3;
+                }
+                .zczQRTLAdd {
+                	background:{
+                    	image:url(../img/query_page/add.png);
+						position:4px*$xPro 3px*$yPro;
+                    }
+                    margin-right: 21px*$xPro;
+                    >div{
+                    	width:100%;
+						left:0;
+						position:absolute;
+						top:0;
+						overflow:hidden;
+						line-height:18px*$yPro;
+                    }
+                }
+                .zczQRTLDelete{
+                	background:{
+                    	image:url(../img/query_page/del.png);
+						position:4px*$xPro 3px*$yPro;
+                    }
+                }
+            }
+            &:before{
+            	content:"以图搜图";
+            	position:absolute;
+            	left:10px*$xPro;
+            	top:-13px*$yPro;
+            	font-size:16px*$yPro;
+            	background-color:#213f68;
+            }
+        }
+        .zczQRTRight {
+            @include box-sizing;
+            padding: 10px*$yPro 0 0 20px*$xPro;
+            @include calcM(486px*$xPro,width);
+            span{
+            	display:inline-block;
+            	width:80px;
+            	height:26px*$yPro;
+            	line-height:26px*$yPro;
+            }
+            input{
+            	@include box-sizing;
+            	border-width:1px;
+            	height:26px*$yPro;
+            	line-height:26px*$yPro;
+            }
+            select{
+            	height:26px*$yPro;
+            }
+            .zczQRTRTitle {
+                height: 26px*$yPro;
+                margin-bottom: 10px*$yPro;
+                select {
+                    width: 395px*$xPro;
+                }
+            }
+            .zczQRTRContent {
+                overflow: hidden;
+                width: 100%;
+                li {
+                    float: left;
+                    margin: 0 20px*$xPro 10px*$yPro 0;
+                    height: 26px*$yPro;
+                    select {
+                        width: 82px;
+                    }
+                }
+            }
+            .zczQRTRLine{
+            	width:730px*$xPro;
+            	height:2px*$yPro;
+            	background-color:#1d436a;
+            	margin-bottom:9px*$yPro;
+            }
+            &:before{
+            	content:"语意检索";
+            	position:absolute;
+            	left:10px*$xPro;
+            	top:-13px*$yPro;
+            	font-size:16px*$yPro;
+            	background-color:#213f68;
+            }
+        }
+        .zczQRTBottom {
+            height: 26px*$yPro;
+            position: relative;
+            width: 730px*$xPro;
+            button {
+                position: absolute;
+                height:26px*$yPro;
+                right: 0;
+                top: 0;
+                width:100px;
+                border-radius:3px;
+                text-align:left;
+                text-indent:38px*$xPro;
+                background:{
+                	image:url(../img/query_page/scBt.png);
+					position:14px*$xPro 7px*$yPro;
+					repeat:no-repeat;
+					color:#2676c0;
+                }
+                &:hover{
+                	background-color:#499be6;
+                }
+            }
+        }
+    }
+    .zczQRBottom {
+        @include calcM(363px*$yPro,height);
+        @include box-sizing;
+        padding: 17px*$yPro 0px 0 6px*$xPro;
+        border:2px solid #4e6b84;
+        background-color:#213f68;
+        position:relative;
+        .zczQRBContent {
+            @include calcM(60px*$yPro,height);
+            overflow-x: hidden;
+            overflow-y: auto;
+            .zczQRBCList {
+                overflow: hidden;
+                >li {
+                    width: 167px;
+                    height: 117px*$yPro;
+                    float: left;
+                    margin-right: 10px*$xPro;
+                    margin-bottom: 10px*$yPro;
+                    position: relative;
+                    background-color: #444851;
+                    &:nth-child(6n){
+                    	margin-right: 0;
+                    }
+                    dl {
+                        height: 100%;
+                        width:100%;
+                        @include box-sizing;
+                        padding: 7px*$yPro 0 10px*$yPro 18px*$xPro;
+                        &>*{
+                        	float:left;
+                        	height: 100px*$yPro;
+                        }
+                        dt {
+                            width:80px*$xPro;
+                            position:relative;
+							background-color:#000;
+							margin-right:18px*$xPro;
+                            img {
+                                position:absolute;
+								left:0;
+								top:0;
+								right:0;
+								bottom:0;
+								margin:auto;
+                            }
+                        }
+                        dd {
+                        	@include calcM(98px*$xPro,width);
+                            ul {
+								li:nth-child(n+6){
+									display:none;
+								}
+		                    }
+                        }
+                    }
+                }
+            }
+        }
+        .zczQRBFoot {
+            height: 20px*$yPro;
+            padding-top: 20px*$yPro;
+            &>div{
+            	float:left;
+            	height: 20px*$yPro;
+            }
+            .zczQRBFNum {
+            	margin:0 29px*$xPro 0 360px*$xPro;
+            }
+            .zczQRBFFlip {
+            	&>div{
+            		float: left;
+            		display: inline-block;
+            		padding: 0 5px*$xPro;
+            		height:20px*$yPro;
+            		input {
+                        background-color: #cce7fa;
+                        border: none;
+                        height: 18px*$yPro;
+                        border:1px solid #2983c2;
+                        width: 18px*$xPro;
+                        color: #393939;
+                        margin: 0 5px*$xPro;
+                    }
+            	}
+                &>div:not(:nth-child(5)) {
+                    cursor: pointer;
+                    background-color: #23517e;
+                    border:1px solid #2983c2;
+                    height: 18px*$yPro;
+                    line-height: 18px*$yPro;
+                    margin-right: 5px*$xPro;
+                    &:not(:nth-child(5)):hover {
+                        background-color: #55a4ea;
+                    }
+                }
+            }
+        }
+        &:before{
+        	content:"检索结果";
+        	position:absolute;
+        	left:10px*$xPro;
+        	top:-13px*$yPro;
+        	font-size:16px*$yPro;
+        	background-color:#213f68;
+        }
+    }
+}
+.layui-layer-content{
+	color:#000;
+	text-align:center;
+}

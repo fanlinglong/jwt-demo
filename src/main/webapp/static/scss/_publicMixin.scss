@@ -1,0 +1,112 @@
+$xPro:1360/1920;
+$yPro:768/949;
+
+@mixin box-sizing {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+@mixin calcM($key,$name){
+    #{$name}: calc(100% - #{$key});
+    #{$name}: -webkit-calc(100% - #{$key});
+    #{$name}: -moz-calc(100% - #{$key});
+    #{$name}: -ms-calc(100% - #{$key});
+    #{$name}: -o-calc(100% - #{$key}); 
+}
+
+@mixin bgColor($direction...){
+	background: -webkit-linear-gradient(#{$direction}); 
+	background: -o-linear-gradient(#{$direction});
+	background: -moz-linear-gradient(#{$direction}); 
+	background: linear-gradient(#{$direction}); 
+}
+
+@mixin boxSha($direction...){
+	box-shadow: $direction;
+    -webkit-box-shadow: $direction;
+    -moz-box-shadow: $direction;
+    -ms-box-shadow: $direction;
+    -o-box-shadow: $direction; 
+}
+
+@mixin repeatLi($direction...){
+	background: -webkit-repeating-linear-gradient($direction);
+	background: -o-repeating-linear-gradient($direction);
+	background: -moz-repeating-linear-gradient($direction);
+	background: repeating-linear-gradient($direction);
+}
+
+.extendTitle{
+	height: 61px;
+    li {
+    	border:1px solid #596070;
+        float: left;
+        height: 59px;
+        line-height: 59px;
+        width: 170px;
+        text-align: left;
+        text-indent:71px;
+        cursor: pointer;
+        background-color: #5180a9;
+        background:{
+        	repeat:no-repeat;
+        	position:28px 18px;
+        }
+        &:hover,
+        &.zczQLLCheck {
+            background-color: #2b69a1;
+        }
+        &:nth-child(1){
+            background:{
+            	image:url(../img/query_page/equipment.png);
+            }
+        }
+        &:nth-child(2){
+            background:{
+            	image:url(../img/query_page/tak.png);
+            }
+        }
+    }
+    li:first-child{
+    	margin-right:2px;
+    }
+}
+
+.extendTitle_smoll{
+	height: 61px*$yPro;
+    li {
+    	border:1px solid #596070;
+        float: left;
+        height: 59px*$yPro;
+        line-height: 59px*$yPro;
+        width: 170px*$xPro;
+        text-align: left;
+        text-indent:71px*$xPro;
+        cursor: pointer;
+        background-color: #5180a9;
+        background:{
+        	repeat:no-repeat;
+        	position:28px*$xPro 18px*$yPro;
+        }
+        &:hover,
+        &.zczQLLCheck {
+            background-color: #2b69a1;
+        }
+        &:nth-child(1){
+            background:{
+            	image:url(../img/query_page/equipment.png);
+            }
+        }
+        &:nth-child(2){
+            background:{
+            	image:url(../img/query_page/tak.png);
+            }
+        }
+    }
+    li:first-child{
+    	margin-right:2px*$xPro;
+    }
+}

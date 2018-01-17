@@ -1,0 +1,247 @@
+@charset "UTF-8";
+.extendTitle {
+  height: 61px;
+}
+.extendTitle li {
+  border: 1px solid #596070;
+  float: left;
+  height: 59px;
+  line-height: 59px;
+  width: 170px;
+  text-align: left;
+  text-indent: 71px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 28px 18px;
+}
+.extendTitle li:hover, .extendTitle li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle li:first-child {
+  margin-right: 2px;
+}
+
+.extendTitle_smoll {
+  height: 49.3656480506px;
+}
+.extendTitle_smoll li {
+  border: 1px solid #596070;
+  float: left;
+  height: 47.7471022129px;
+  line-height: 47.7471022129px;
+  width: 120.4166666667px;
+  text-align: left;
+  text-indent: 50.2916666667px;
+  cursor: pointer;
+  background-color: #5180a9;
+  background-repeat: no-repeat;
+  background-position: 19.8333333333px 14.5669125395px;
+}
+.extendTitle_smoll li:hover, .extendTitle_smoll li.zczQLLCheck {
+  background-color: #2b69a1;
+}
+.extendTitle_smoll li:nth-child(1) {
+  background-image: url(../img/query_page/equipment.png);
+}
+.extendTitle_smoll li:nth-child(2) {
+  background-image: url(../img/query_page/tak.png);
+}
+.extendTitle_smoll li:first-child {
+  margin-right: 1.4166666667px;
+}
+
+.zczDataMain {
+  background-color: rgba(0, 0, 51, 0.9);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  padding: 30px 40px;
+  background: -webkit-linear-gradient(left top, #393659, #294975, #2a567e, #25507b, #153e74);
+  background: -o-linear-gradient(left top, #393659, #294975, #2a567e, #25507b, #153e74);
+  background: -moz-linear-gradient(left top, #393659, #294975, #2a567e, #25507b, #153e74);
+  background: linear-gradient(left top, #393659, #294975, #2a567e, #25507b, #153e74);
+}
+.zczDataMain .select_bar {
+  height: 28px;
+  margin-bottom: 20px;
+}
+.zczDataMain .select_bar > * {
+  float: left;
+}
+.zczDataMain .select_bar > button {
+  height: 28px;
+  margin-left: 22px;
+  width: 60px;
+  border: 1px solid #2983c2;
+  text-align: left;
+  text-indent: 26px;
+  line-height: 26px;
+  background-color: #3e83b3;
+  background-position: 9px 7px;
+  background-repeat: no-repeat;
+}
+.zczDataMain .select_bar > button:hover {
+  background-color: #499be6;
+}
+.zczDataMain .select_bar > label {
+  margin-left: 30px;
+  margin-top: 6px;
+}
+.zczDataMain .select_bar > input, .zczDataMain .select_bar > select {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  /* float: left; */
+  border: none;
+  background-color: #1f4e7d;
+  box-shadow: 0 0 10px #000 inset;
+  -webkit-box-shadow: 0 0 10px #000 inset;
+  -moz-box-shadow: 0 0 10px #000 inset;
+  -ms-box-shadow: 0 0 10px #000 inset;
+  -o-box-shadow: 0 0 10px #000 inset;
+  margin-left: 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+.zczDataMain .select_bar #add_zczDataList, .zczDataMain .select_bar #refresh_zczDataList {
+  float: right;
+}
+.zczDataMain .select_bar #query_button {
+  background-image: url(../img/exhibition_page/search2.png);
+}
+.zczDataMain .select_bar #add_zczDataList {
+  background-image: url(../img/data_page/add2.png);
+}
+.zczDataMain .select_bar #refresh_zczDataList {
+  background-image: url(../img/data_page/ref.png);
+}
+.zczDataMain .zczDataBox {
+  height: calc(100% - 60px);
+  height: -webkit-calc(100% - 60px);
+  height: -moz-calc(100% - 60px);
+  height: -ms-calc(100% - 60px);
+  height: -o-calc(100% - 60px);
+}
+.zczDataMain .zczDataBox #zczDataList {
+  height: calc(100% - 30px);
+  height: -webkit-calc(100% - 30px);
+  height: -moz-calc(100% - 30px);
+  height: -ms-calc(100% - 30px);
+  height: -o-calc(100% - 30px);
+}
+.zczDataMain .zczDataBox #zczDataPage {
+  height: 30px;
+}
+
+/*
+ *修改jqgrid样式
+ */
+.ui-jqgrid-title {
+  color: #fff;
+}
+
+.ui-widget-header, .ui-jqgrid-bdiv {
+  background: transparent;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  color: #fff;
+  background: transparent;
+}
+
+.ui-widget-content {
+  background: transparent;
+  color: #fff;
+}
+
+.ui-widget-content a {
+  color: #fff;
+}
+
+/*
+*修改layer样式
+*/
+.layui-layer-btn {
+  border-top: 1px solid #eee;
+  background-color: #000033;
+}
+
+.layui-layer-btn .layui-layer-btn0, .layui-layer-btn .layui-layer-btn1 {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: #fff !important;
+}
+
+.layui-layer-btn .layui-layer-btn0:hover, .layui-layer-btn .layui-layer-btn1:hover {
+  background-color: #d18631 !important;
+  border-color: #d18631 !important;
+}
+
+.layui-layer-lan .layui-laer-title {
+  background-color: #000333 !important;
+  color: #fff;
+  border: none;
+}
+
+.layui-layer-content {
+  color: #000;
+}
+
+/*
+*进度条样式
+*/
+.zczDataBar {
+  color: white !important;
+  width: 90%;
+  height: 20px;
+  background-color: #505050;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-shadow: 0 0 10px #000 inset;
+  -webkit-box-shadow: 0 0 10px #000 inset;
+  -moz-box-shadow: 0 0 10px #000 inset;
+  -ms-box-shadow: 0 0 10px #000 inset;
+  -o-box-shadow: 0 0 10px #000 inset;
+  position: relative;
+  margin-top: 1px;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+.zczDataBar > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  border-radius: 10px;
+  width: 0px;
+  background: -webkit-repeating-linear-gradient(-30deg, #1f8cb0 0px, #1d8aae 10px);
+  background: -o-repeating-linear-gradient(-30deg, #1f8cb0 0px, #1d8aae 10px);
+  background: -moz-repeating-linear-gradient(-30deg, #1f8cb0 0px, #1d8aae 10px);
+  background: repeating-linear-gradient(-30deg, #1f8cb0 0px, #1d8aae 10px);
+}
+.zczDataBar > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=data_page.css.map */

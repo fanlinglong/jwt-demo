@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "publicMixin";
+.zczDataMain {
+    background-color: rgba(0,0,51,.9);
+    width: 100%;
+    height: 100%;
+    @include box-sizing;
+    padding:30px 40px;
+    @include bgColor(left top, #393659,#294975,#2a567e,#25507b , #153e74);
+    .select_bar{
+		height:28px;
+		margin-bottom:20px;
+		>*{
+			float:left;
+		}
+		>button{
+		  height:28px;
+		  margin-left:22px;
+		  width:60px;
+		  border:1px solid #2983c2;
+		  text-align:left;
+		  text-indent:26px;
+		  line-height:26px;
+		  background:{
+		  	color:#3e83b3;
+		  	position:9px 7px;
+		  	repeat:no-repeat;
+		  }
+		}
+		>button:hover{
+			background-color:#499be6;
+		}
+		>label{
+		  margin-left:30px;
+		  margin-top:6px;
+		}
+		>input,>select{
+		  display: inline-block;
+		  height: 28px;
+		  line-height: 28px;
+		  /* float: left; */
+		  border: none;
+		  background-color: #1f4e7d;
+		  @include boxSha(0 0 10px #000 inset);
+		  margin-left: 10px;
+		  border-radius: 3px;
+		  color: #fff;
+		}
+		#add_zczDataList,#refresh_zczDataList{
+			float:right;
+		}
+		#query_button{
+			background:{
+			  	image:url(../img/exhibition_page/search2.png);
+			}
+		}
+		#add_zczDataList{
+			background:{
+			  	image:url(../img/data_page/add2.png);
+			}
+		}
+		#refresh_zczDataList{
+			background:{
+			  	image:url(../img/data_page/ref.png);
+			}
+		}
+	}
+    .zczDataBox {
+        @include calcM(60px,height);
+        #zczDataList {
+            @include calcM(30px,height);
+        }
+        #zczDataPage{
+            height: 30px;
+        }
+    }
+}
+
+/*
+ *修改jqgrid样式
+ */
+ .ui-jqgrid-title{
+ 	color:#fff;
+ }
+ 
+ .ui-widget-header,.ui-jqgrid-bdiv{
+ 	background:transparent;
+ }
+ 
+ .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+ 	color:#fff;
+ 	background:transparent;
+ }
+ 
+.ui-widget-content{
+ 	background:transparent;
+ 	color:#fff;
+ }
+ 
+ .ui-widget-content a{
+ 	color:#fff;
+ }
+ 
+ /*
+ *修改layer样式
+ */
+ .layui-layer-btn{
+ 	border-top:1px solid #eee;
+ 	background-color:rgb(0,0,51);
+ }
+ 
+ .layui-layer-btn .layui-layer-btn0,.layui-layer-btn .layui-layer-btn1{
+ 	background-color: rgb(0, 51, 102)!important;
+ 	border-color:rgb(0, 51, 102)!important;
+ 	color:#fff!important;
+ }
+ 
+ .layui-layer-btn .layui-layer-btn0:hover,.layui-layer-btn .layui-layer-btn1:hover{
+ 	background-color: rgb(209, 134, 49)!important;
+ 	border-color:rgb(209, 134, 49)!important;
+ }
+
+ .layui-layer-lan .layui-laer-title{
+   background-color:#000333 !important;
+   color:#fff;
+   border:none;
+ }
+
+ .layui-layer-content{
+   color:#000;
+ }
+
+ 
+ /*
+ *进度条样式
+ */
+ .zczDataBar{
+    color:white !important;
+ 	width:90%;
+ 	height:20px;
+ 	background-color: #505050;
+ 	@include box-sizing;
+    @include boxSha(0 0 10px #000 inset);
+    position:relative;
+ 	margin:{
+ 		top:1px;
+ 		left:5%;
+ 	}
+ 	border-radius:10px;
+ 	>div {
+ 		position:absolute;
+ 		left:0;
+ 		top:0;
+ 		height:20px;
+        border-radius: 10px;
+        width: 0px;
+        @include repeatLi(-30deg,#1f8cb0 0px,#1d8aae 10px);
+    }
+    >span{
+    	position:absolute;
+ 		left:0;
+ 		top:0;
+ 		height:20px;
+ 		text-align:center;
+    	line-height:20px;
+    	display:block;
+    	width:100%;
+    }
+ }
