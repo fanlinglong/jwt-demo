@@ -52,23 +52,24 @@
         </property>
         <property name="filterChainDefinitions">
             <value>
+                /static/**=anon
                 /login=anon
+                /tologin=anon
+                /userhelp/**=anon
                 /** = acf
             </value>
         </property>
     </bean>
 
-
-
     <!-- Shiro生命周期处理器 -->
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
 
-
+    <!--自定义的 CacheManager 管理器 -->
     <bean id="cacheManager" class="com.videtek.jwt.demo.shiro.cache.CustomShiroCacheManager">
         <property name="shiroCacheManager" ref="redisShiroCacheManager" />
     </bean>
 
-    <!--redis cache管理器 -->
+    <!--redis ShiroCacheManager 管理器 -->
     <bean id="redisShiroCacheManager" class="com.videtek.jwt.demo.shiro.cache.RedisShiroCacheManager">
         <property name="cacheManager" ref="redisManager" />
     </bean>

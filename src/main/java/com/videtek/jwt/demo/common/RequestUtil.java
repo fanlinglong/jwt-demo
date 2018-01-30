@@ -3,13 +3,40 @@ package com.videtek.jwt.demo.common;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
-public class RequestIpAddrUtil {
+public class RequestUtil {
+
+    //get request headers
+    public static Map<String, String> getHeadersInfo(HttpServletRequest request) {
+        Map<String, String> map = new HashMap<>();
+        Enumeration headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String key = (String) headerNames.nextElement();
+            String value = request.getHeader(key);
+            // 存入大写的key
+            map.put(key.toUpperCase(), value);
+        }
+        return map;
+    }
+
+    /**
+     * 不区分key大小写
+     * @param request
+     * @param key
+     * @return
+     */
+    public static String getHeaderIgnoreCase(HttpServletRequest request, String key) {
+        Map<String, String> headersInfo = getHeadersInfo(request);
+        // 取大写的key
+        return headersInfo.get(key.toUpperCase());
+    }
+
     /**
      * 获取访问者IP
-     * <p>
      * 在一般情况下使用Request.getRemoteAddr()即可，但是经过nginx等反向代理软件后，这个方法会失效。
-     * <p>
      * 本方法先从Header中获取X-Real-IP，如果不存在再从X-Forwarded-For获得第一个IP(用,分割)，
      * 如果还不存在则调用Request .getRemoteAddr()。
      *

@@ -16,6 +16,10 @@ public class RedisManager {
         return jedisPool;
     }
 
+    /**
+     * 使用配置文件的方式注入
+     * @param jedisPool
+     */
     public void setJedisPool(JedisPool jedisPool) {
         this.jedisPool = jedisPool;
     }

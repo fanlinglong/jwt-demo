@@ -10,22 +10,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("user")
-public class UserController {
-
+@RequestMapping("userhelp")
+public class UserHelpController {
 
     @Resource
     private UserService userService;
 
-    public String toView() {
-        return "";
-    }
-
-    @RequestMapping("add")
+    @RequestMapping("reg")
     @ResponseBody
     public void doSave(User user) {
-        userService.add(user);
-        WebResult.build(200, "注册成功！");
+        boolean success = userService.add(user);
+        WebResult.build(200, success ? "注册成功！" : "注册失败！");
         return;
     }
 }

@@ -1,22 +1,24 @@
-package com.videtek.jwt.demo.common;
+package com.videtek.jwt.demo.base.redis;
 
-import com.videtek.jwt.demo.service.UserService;
+import com.videtek.jwt.demo.common.GsonUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
+/**
+ * RedisTemplateUtil工具类（使用spring-data-redis包）
+ */
+public class RedisTemplateUtil {
 
-@Component
-public class JedisCacheUtil {
-
-    @Resource(name = "redisTemplate")
     public RedisTemplate redisTemplate;
 
-    @Autowired
-    private UserService userService;
+    /**
+     * 使用配置文件注入
+     * @param redisTemplate
+     */
+    public void setRedisTemplate(RedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     public String getString(String key) {
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
@@ -28,7 +30,7 @@ public class JedisCacheUtil {
         return redisTemplate.opsForValue().get(key);
     }
 
-    public <T> T getToPojo(String key, Class<T> clz) {
+    public <T> T getToObj(String key, Class<T> clz) {
         String data = getString(key);
         if (StringUtils.isBlank(data)) {
             return null;
@@ -42,7 +44,6 @@ public class JedisCacheUtil {
     }
 
     public void setForString(String key, String data, int expireTime) {
-        redisTemplate.opsForValue();
         redisTemplate.opsForValue().set(key, data, expireTime);
     }
 }

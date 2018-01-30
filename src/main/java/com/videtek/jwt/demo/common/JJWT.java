@@ -10,7 +10,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Date;
 
-public class JWTUtil {
+public class JJWT {
 
     /**
      * 由字符串生成加密key
@@ -61,7 +61,8 @@ public class JWTUtil {
         return claims;
     }
 
-    public static long CompareTime(String s) {
-        return 0;
+    public static long CompareTime(String accessTime) {
+        long time = Long.parseLong(Base64Util.decodeData(accessTime));
+        return System.currentTimeMillis() - time;
     }
 }

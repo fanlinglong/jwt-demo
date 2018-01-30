@@ -171,31 +171,13 @@
 
     <!-- 配置拦截器 -->
     <mvc:interceptors>
-
-        <!--    登录session是否过去拦截器-->
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/login.do" />
-            <mvc:exclude-mapping path="/tologin.do" />
-            <bean class="com.videtek.jwt.demo.base.interceptor.LoginedInterceptor" />
+            <mvc:exclude-mapping path="/login" />
+            <mvc:exclude-mapping path="/tologin" />
+            <mvc:exclude-mapping path="/userhelp/**" />
+            <mvc:exclude-mapping path="/static/**" />
+            <bean class="com.videtek.jwt.demo.base.interceptor.TokenInterceptor" />
         </mvc:interceptor>
-
-        <!-- 表单重复提交拦截器 -->
-        <!-- 		<mvc:interceptor> -->
-        <!-- 		    <mvc:mapping path="/**"/> -->
-        <!-- 		    <bean class="com.videtek.sign.base.interceptor.TokenInterceptor" /> -->
-        <!-- 		</mvc:interceptor> -->
-
-        <!-- 日志记录拦截器 -->
-        <!-- 		<mvc:interceptor> -->
-        <!-- 		    <mvc:mapping path="/**"/> -->
-        <!-- 		    <bean class="com.videtek.sign.base.interceptor.LogInterceptor" /> -->
-        <!-- 		</mvc:interceptor> -->
-
-        <!-- 权限拦截器 -->
-        <!-- 		<mvc:interceptor> -->
-        <!-- 		    <mvc:mapping path="/**"/> -->
-        <!-- 		    <bean class="com.videtek.sign.base.interceptor.PermissionInterceptor" /> -->
-        <!-- 		</mvc:interceptor> -->
     </mvc:interceptors>
 </beans>

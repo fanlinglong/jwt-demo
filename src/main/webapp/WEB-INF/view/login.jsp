@@ -8,8 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css"
-          href="${_ctx }/static/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="${_ctx }/static/css/public.css"/>
     <!-- <link rel="stylesheet" type="text/css" -->
     <%-- 	href="${_ctx }/static/css/login.css" /> --%>
     <title>登录</title>
@@ -103,7 +102,9 @@
             data: $("#login").serialize(),
             success: function (data) {
                 if (data.code == 200) {
-                    window.location.href = "${_ctx}/main.do?token=" + data.data;
+                    debugger
+                    var obj = JSON.parse(data.data);
+                    window.location.href = "${_ctx}/main.do?token=" + obj.token+"&userName="+obj.userName;
                 } else {
                     layer.msg(data.message, {
                         time: 1500

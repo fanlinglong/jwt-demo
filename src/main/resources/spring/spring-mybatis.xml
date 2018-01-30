@@ -19,6 +19,7 @@
 		<!--<property name="password" value="${connection.password}" />-->
 	<!--</bean>-->
 
+	<!-- druid pool 提高sql连接效率-->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<!-- 基本属性 url、user、password -->
 		<property name="DriverClassName" value="${connection.driver_class}" />

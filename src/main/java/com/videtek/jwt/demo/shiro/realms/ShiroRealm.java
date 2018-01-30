@@ -1,7 +1,8 @@
 package com.videtek.jwt.demo.shiro.realms;
 
 import com.videtek.jwt.demo.base.exception.BizException;
-import com.videtek.jwt.demo.common.JedisCacheUtil;
+import com.videtek.jwt.demo.common.GsonUtils;
+import com.videtek.jwt.demo.base.redis.RedisUtil;
 import com.videtek.jwt.demo.pojo.User;
 import com.videtek.jwt.demo.service.UserService;
 import org.apache.shiro.authc.*;
@@ -13,28 +14,6 @@ public class ShiroRealm extends AuthenticatingRealm {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private JedisCacheUtil jedisCacheUtil;
-
-    @Override
-    protected void assertCredentialsMatch(AuthenticationToken authcToken, AuthenticationInfo info) throws AuthenticationException {
-        UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
-        // 若单点登录，则使用单点登录授权方法。
-        Object credentials = token.getCredentials();
-        Object principal = token.getPrincipal();
-        String tokenStr = token.toString();
-
-
-        if (token.toString().equals(token.getCredentials())){
-            // sso密钥+用户名+日期，进行md5加密，举例： Digests.md5(secretKey+username+20150101)）
-//            String secretKey = Global.getConfig("shiro.sso.secretKey");
-//            String password = Digests.md5(secretKey + token.getUsername() + DateUtils.getDate("yyyyMMdd"));
-//            if (password.equals(String.valueOf(token.getPassword()))){
-                return;
-//            }
-        }
-        super.assertCredentialsMatch(token, info);
-    }
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
@@ -50,7 +29,8 @@ public class ShiroRealm extends AuthenticatingRealm {
         //3.1 从redis中获取
 
         try {
-            user = jedisCacheUtil.getToPojo(userInfoKey, User.class);
+            String json = RedisUtil.get(userInfoKey);
+            user = GsonUtils.json2Obj(json, User.class);
             if (user == null) {
                 user = addUserAndGetUser(username, userInfoKey);
             }
@@ -73,7 +53,7 @@ public class ShiroRealm extends AuthenticatingRealm {
         if (user == null) {
             throw new BizException("用户不存在");
         }
-        jedisCacheUtil.set(userInfoKey, user, 60 * 3);
+        RedisUtil.set(userInfoKey, GsonUtils.toJson(user));
         return user;
     }
 }
